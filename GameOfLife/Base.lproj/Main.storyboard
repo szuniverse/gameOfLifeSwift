@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameOfLife" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cz4-nD-8zG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="272"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcf-k6-Tkc">
+                                        <rect key="frame" x="146" y="121" width="83" height="30"/>
+                                        <state key="normal" title="Modify Area"/>
+                                        <connections>
+                                            <action selector="modifyAreaButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DyO-tw-gsr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmQ-Aw-ayI">
+                                        <rect key="frame" x="145.5" y="159" width="83" height="30"/>
+                                        <state key="normal" title="Play / Pause"/>
+                                        <connections>
+                                            <action selector="playOrPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pha-Pk-be0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Kcf-k6-Tkc" firstAttribute="centerX" secondItem="cz4-nD-8zG" secondAttribute="centerX" id="JB8-rH-eup"/>
+                                    <constraint firstItem="Kcf-k6-Tkc" firstAttribute="centerY" secondItem="cz4-nD-8zG" secondAttribute="centerY" id="e6d-l2-x7J"/>
+                                    <constraint firstItem="DmQ-Aw-ayI" firstAttribute="centerX" secondItem="Kcf-k6-Tkc" secondAttribute="centerX" id="o3N-IF-7Fk"/>
+                                    <constraint firstItem="DmQ-Aw-ayI" firstAttribute="top" secondItem="Kcf-k6-Tkc" secondAttribute="bottom" constant="8" id="vsv-Sy-aae"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-Ha-ABR" customClass="SKView">
+                                <rect key="frame" x="0.0" y="292" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aZ7-Ha-ABR" secondAttribute="height" multiplier="1:1" id="soV-9I-eAI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aZ7-Ha-ABR" firstAttribute="top" secondItem="cz4-nD-8zG" secondAttribute="bottom" id="HKz-KZ-M70"/>
+                            <constraint firstAttribute="trailing" secondItem="cz4-nD-8zG" secondAttribute="trailing" id="Nqa-XO-S48"/>
+                            <constraint firstAttribute="trailing" secondItem="aZ7-Ha-ABR" secondAttribute="trailing" id="W1p-7P-fTW"/>
+                            <constraint firstItem="aZ7-Ha-ABR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W4D-VH-q0Q"/>
+                            <constraint firstItem="cz4-nD-8zG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f2d-kp-vP8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aZ7-Ha-ABR" secondAttribute="bottom" id="sHz-lK-baP"/>
+                            <constraint firstItem="cz4-nD-8zG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zGU-pC-hBN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="skViewContainer" destination="aZ7-Ha-ABR" id="3WI-3U-gsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
