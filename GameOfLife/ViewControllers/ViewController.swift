@@ -61,7 +61,7 @@ private extension ViewController {
     
     func showBoundsErrorMessage() {
         let alert = UIAlertController(title: "Hey", message: "Please type a number between 1 and 200", preferredStyle: UIAlertControllerStyle.alert)
-        //alert.addAction(UIAlertAction(title: "Working!!", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
